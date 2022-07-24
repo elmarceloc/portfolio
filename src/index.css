@@ -155,12 +155,11 @@
   display: inline-block;
 }
 
-.tecnologyTitle:hover{
-  text-decoration: none!important;
+.tecnologyTitle:hover {
+  text-decoration: none !important;
   color: #00cb9a;
   /* transition */
-  -webkit-transition: all .5s ease;
-
+  -webkit-transition: all 0.5s ease;
 }
 
 @keyframes wave-animation {
