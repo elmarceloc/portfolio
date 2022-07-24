@@ -16,7 +16,7 @@ const components = {
         textDecoration: 'underline',
         fontSize: 20,
         textUnderlineOffset: 6,
-        textDecorationColor: '#525252',
+        textDecorationColor: '#009974',
         textDecorationThickness: 4,
         marginTop: 3,
         marginBottom: 4,
@@ -25,7 +25,7 @@ const components = {
   },
   Link: {
     baseStyle: props => ({
-      color: mode('#3d7aed', '#ff63c3')(props),
+      color: mode('#009974', '#009974')(props),
       textUnderlineOffset: 3,
     }),
   },
@@ -36,7 +36,7 @@ const fonts = {
 }
 
 const colors = {
-  grassTeal: '#88ccca',
+  grassTeal: '#009974',
 }
 
 const config = {

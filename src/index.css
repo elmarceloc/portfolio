@@ -132,7 +132,7 @@
 .highlighted-word {
   text-decoration: none;
   background-position-y: -0%;
-  background-image: linear-gradient(transparent 50%, #a37fb3 50%);
+  background-image: linear-gradient(transparent 50%, #009974 50%);
   transition: background 500ms ease;
   background-size: 2px;
   background-size: auto 175%;
@@ -145,7 +145,7 @@
 .mail {
   color: inherit;
   text-decoration: none;
-  border-bottom: 3px solid gold;
+  border-bottom: 3px solid #009974;
 }
 .wave {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
@@ -153,6 +153,14 @@
   animation-iteration-count: infinite; /* Never stop waving :) */
   transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
   display: inline-block;
+}
+
+.tecnologyTitle:hover{
+  text-decoration: none!important;
+  color: #00cb9a;
+  /* transition */
+  -webkit-transition: all .5s ease;
+
 }
 
 @keyframes wave-animation {
