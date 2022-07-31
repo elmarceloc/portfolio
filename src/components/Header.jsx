@@ -31,10 +31,17 @@ import {
   FaWindows,
   FaChrome,
   FaLaravel,
-  FaSass
+  FaSass,
 } from 'react-icons/fa'
 import { IoLogoElectron } from 'react-icons/io5'
-import { SiMysql, SiHeroku, SiElectron, SiJquery, SiPhp, SiAdobephotoshop } from 'react-icons/si'
+import {
+  SiMysql,
+  SiHeroku,
+  SiElectron,
+  SiJquery,
+  SiPhp,
+  SiAdobephotoshop,
+} from 'react-icons/si'
 import { ReactComponent as BurgerKingLogo } from '../logos/burger-king.svg'
 import { ReactComponent as LuaLogo } from '../logos/Lua.svg'
 import ExpressLogo from '../logos/express-js.jsx'
@@ -44,7 +51,7 @@ import { SiMongodb } from 'react-icons/si'
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import { MdWebAsset } from 'react-icons/md'
 
-import {AiFillStar} from 'react-icons/ai'
+import { AiFillStar } from 'react-icons/ai'
 
 import IncoludidoLogo from '../logos/incoludido.png'
 import BlasterLogo from '../logos/blaster.png'
@@ -62,7 +69,6 @@ const SectionHeading = ({ title }) => (
     color={useColorModeValue('black', 'gray.200')}
     backgroundColor={useColorModeValue('rgb(226, 232, 240)', '#2d2d30')}
   >
-
     {title}
   </Badge>
 )
@@ -88,7 +94,7 @@ const ProjectTag = ({ name, icon }) => (
     variant="outline"
     color="#009974"
     boxShadow={'inset 0 0 0px 1px #009974'}
-    >
+  >
     <Icon w={6} h={6} as={icon} />
     <TagLabel> {name}</TagLabel>
   </Tag>
@@ -127,7 +133,7 @@ const Client = ({
         {description}
       </Text>
 
-      <HStack display={'inline'} >{tags}</HStack>
+      <HStack display={'inline'}>{tags}</HStack>
     </Box>
   </Flex>
 )
@@ -191,7 +197,7 @@ export default function Header() {
               <br />
 
               <Stack textAlign={'center'} as={Box} marginY="5" spacing="3">
-                  <Text fontSize="2xl" fontWeight="thin">
+                <Text fontSize="2xl" fontWeight="thin">
                   <Link href="https://github.com/elmarceloc" isExternal>
                     <Icon as={FiGithub} /> @elmarceloc
                   </Link>
@@ -209,10 +215,9 @@ export default function Header() {
               </Stack>
             </Box>
             <Box justifyContent="center">
+              <SectionHeading title={'Backend'} />
 
-            <SectionHeading title={'Backend'}/>
-
-            <Stack
+              <Stack
                 paddingX="14"
                 justify="center"
                 direction="row"
@@ -231,9 +236,9 @@ export default function Header() {
                 <TecnologyIcon name="Laravel" icon={FaLaravel} />
               </Stack>
 
-            <SectionHeading title={'Frontend'}/>
+              <SectionHeading title={'Frontend'} />
 
-            <Stack
+              <Stack
                 paddingX="14"
                 justify="center"
                 direction="row"
@@ -262,8 +267,8 @@ export default function Header() {
                 <TecnologyIcon name="Sass" icon={FaSass} />
               </Stack>
 
-            <SectionHeading title={'Database'}/>
-            <Stack
+              <SectionHeading title={'Database'} />
+              <Stack
                 paddingX="14"
                 justify="center"
                 direction="row"
@@ -271,15 +276,11 @@ export default function Header() {
                 fontSize="3.2rem"
                 spacing="6"
               >
-                  <TecnologyIcon name="MongoDB" icon={SiMongodb} />
-                  <TecnologyIcon name="MySQL" icon={SiMysql} />
+                <TecnologyIcon name="MongoDB" icon={SiMongodb} />
+                <TecnologyIcon name="MySQL" icon={SiMysql} />
               </Stack>
 
-            
-            
-              
-              
-              <SectionHeading title={'Desktop'}/>
+              <SectionHeading title={'Desktop'} />
               <Stack
                 paddingX="14"
                 justify="center"
@@ -291,9 +292,9 @@ export default function Header() {
                 <TecnologyIcon name="Python" icon={FaPython} />
                 <TecnologyIcon name="Electron" icon={IoLogoElectron} />
                 <TecnologyIcon name="Lua" icon={LuaLogo} />
-                </Stack>
+              </Stack>
 
-              <SectionHeading title={'Tools'}/>
+              <SectionHeading title={'Tools'} />
 
               <Stack
                 paddingX="14"
@@ -314,7 +315,7 @@ export default function Header() {
               </Stack>
 
               <Box justifyContent="center">
-                <SectionHeading title={'Clients'}/>
+                <SectionHeading title={'Clients'} />
 
                 <Client
                   name="Burger King"
@@ -380,7 +381,10 @@ export default function Header() {
                 <Client
                   name="Booyah TV"
                   description={
-                    <>A browser extension that improves the viewer experience on booyah.live for thousands of users.</>
+                    <>
+                      A browser extension that improves the viewer experience on
+                      booyah.live for thousands of users.
+                    </>
                   }
                   tags={
                     <>
