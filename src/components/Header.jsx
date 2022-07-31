@@ -30,12 +30,14 @@ import {
   FaDocker,
   FaWindows,
   FaChrome,
-  FaUserAlt
+  FaLaravel,
+  FaSass
 } from 'react-icons/fa'
 import { IoLogoElectron } from 'react-icons/io5'
-import { SiMysql, SiHeroku, SiElectron, SiJquery, SiPhp } from 'react-icons/si'
+import { SiMysql, SiHeroku, SiElectron, SiJquery, SiPhp, SiAdobephotoshop } from 'react-icons/si'
 import { ReactComponent as BurgerKingLogo } from '../logos/burger-king.svg'
 import { ReactComponent as LuaLogo } from '../logos/Lua.svg'
+import ExpressLogo from '../logos/express-js.jsx'
 
 import { SiMongodb } from 'react-icons/si'
 
@@ -49,6 +51,21 @@ import BlasterLogo from '../logos/blaster.png'
 import BooyahTvlogo from '../logos/booyah-tv.png'
 
 import '../index.css'
+
+const SectionHeading = ({ title }) => (
+  <Badge
+    as="a"
+    variant="solid"
+    marginBottom="5"
+    fontSize="1.2rem"
+    padding={'0.5rem'}
+    color={useColorModeValue('black', 'gray.200')}
+    backgroundColor={useColorModeValue('rgb(226, 232, 240)', '#2d2d30')}
+  >
+
+    {title}
+  </Badge>
+)
 
 const TecnologyIcon = ({ name, icon, href = false }) => (
   <Link
@@ -71,7 +88,7 @@ const ProjectTag = ({ name, icon }) => (
     variant="outline"
     color="#009974"
     boxShadow={'inset 0 0 0px 1px #009974'}
-  >
+    >
     <Icon w={6} h={6} as={icon} />
     <TagLabel> {name}</TagLabel>
   </Tag>
@@ -110,7 +127,7 @@ const Client = ({
         {description}
       </Text>
 
-      <HStack>{tags}</HStack>
+      <HStack display={'inline'} >{tags}</HStack>
     </Box>
   </Flex>
 )
@@ -173,8 +190,8 @@ export default function Header() {
 
               <br />
 
-              <Stack as={Box} marginY="5" spacing="5">
-                <Text fontSize="2xl" fontWeight="thin">
+              <Stack textAlign={'center'} as={Box} marginY="5" spacing="3">
+                  <Text fontSize="2xl" fontWeight="thin">
                   <Link href="https://github.com/elmarceloc" isExternal>
                     <Icon as={FiGithub} /> @elmarceloc
                   </Link>
@@ -192,20 +209,10 @@ export default function Header() {
               </Stack>
             </Box>
             <Box justifyContent="center">
-              <Badge
-                as="a"
-                variant="solid"
-                marginBottom="5"
-                fontSize="1.2rem"
-                padding={'0.5rem'}
-                color={useColorModeValue('black', 'gray.200')}
-                backgroundColor={useColorModeValue('rgb(226, 232, 240)', '#2d2d30')}
-              >
 
-                stack
-              </Badge>
+            <SectionHeading title={'Backend'}/>
 
-              <Stack
+            <Stack
                 paddingX="14"
                 justify="center"
                 direction="row"
@@ -218,7 +225,22 @@ export default function Header() {
                   icon={FaNodeJs}
                   href="https://platzi.com/p/marcelocornejomaldonado/curso/1759-fundamentos-node/diploma/detalle"
                 />
-                <TecnologyIcon name="Python" icon={FaPython} />
+
+                <TecnologyIcon name="Express" icon={ExpressLogo} />
+                <TecnologyIcon name="PHP" icon={FaPhp} />
+                <TecnologyIcon name="Laravel" icon={FaLaravel} />
+              </Stack>
+
+            <SectionHeading title={'Frontend'}/>
+
+            <Stack
+                paddingX="14"
+                justify="center"
+                direction="row"
+                wrap="wrap"
+                fontSize="3.2rem"
+                spacing="6"
+              >
                 <TecnologyIcon name="Javascript" icon={FaJs} />
                 <TecnologyIcon
                   name="HTML5"
@@ -231,28 +253,47 @@ export default function Header() {
                   href="https://platzi.com/p/marcelocornejomaldonado/curso/1758-html-practico/diploma/detalle"
                 />
                 <TecnologyIcon name="VueJs" icon={FaVuejs} />
+                <TecnologyIcon name="Jquery" icon={SiJquery} />
                 <TecnologyIcon
                   name="React"
                   icon={FaReact}
                   href="https://platzi.com/p/marcelocornejomaldonado/curso/2444-react/diploma/detalle"
                 />
-                <TecnologyIcon name="PHP" icon={FaPhp} />
-                <TecnologyIcon name="Electron" icon={IoLogoElectron} />
-                <TecnologyIcon name="MySQL" icon={SiMysql} />
-                <TecnologyIcon name="MongoDB" icon={SiMongodb} />
+                <TecnologyIcon name="Sass" icon={FaSass} />
               </Stack>
 
-              <Badge
-                as="a"
-                variant="solid"
-                marginBottom="5"
-                fontSize="1.2rem"
-                padding={'0.5rem'}
-                color={useColorModeValue('black', 'gray.200')}
-                backgroundColor={useColorModeValue('rgb(226, 232, 240)', '#2d2d30')}
+            <SectionHeading title={'Database'}/>
+            <Stack
+                paddingX="14"
+                justify="center"
+                direction="row"
+                wrap="wrap"
+                fontSize="3.2rem"
+                spacing="6"
               >
-                Tools
-              </Badge>
+                  <TecnologyIcon name="MongoDB" icon={SiMongodb} />
+                  <TecnologyIcon name="MySQL" icon={SiMysql} />
+              </Stack>
+
+            
+            
+              
+              
+              <SectionHeading title={'Desktop'}/>
+              <Stack
+                paddingX="14"
+                justify="center"
+                direction="row"
+                wrap="wrap"
+                fontSize="3.2rem"
+                spacing="6"
+              >
+                <TecnologyIcon name="Python" icon={FaPython} />
+                <TecnologyIcon name="Electron" icon={IoLogoElectron} />
+                <TecnologyIcon name="Lua" icon={LuaLogo} />
+                </Stack>
+
+              <SectionHeading title={'Tools'}/>
 
               <Stack
                 paddingX="14"
@@ -269,21 +310,11 @@ export default function Header() {
                   href="https://platzi.com/p/marcelocornejomaldonado/curso/2066-course/diploma/detalle"
                 />
                 <TecnologyIcon name="Heroku" icon={SiHeroku} />
-                <TecnologyIcon name="SSH" icon={VscTerminalPowershell} />
+                <TecnologyIcon name="Photoshop" icon={SiAdobephotoshop} />
               </Stack>
 
               <Box justifyContent="center">
-                <Badge
-                  as="a"
-                  variant="solid"
-                  marginBottom="5"
-                  fontSize="1.2rem"
-                  padding={'0.5rem'}
-                  color={useColorModeValue('black', 'gray.200')}
-                  backgroundColor={useColorModeValue('rgb(226, 232, 240)', '#2d2d30')}
-                  >
-                  Clients
-                </Badge>
+                <SectionHeading title={'Clients'}/>
 
                 <Client
                   name="Burger King"
